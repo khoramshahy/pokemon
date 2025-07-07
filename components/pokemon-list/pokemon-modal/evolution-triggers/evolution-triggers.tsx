@@ -1,7 +1,7 @@
 "use client";
 
 import { be_url, staleTime } from "@/api/backend-url";
-import { ErrorMessage, Table, type Column } from "@/lib/components";
+import { ErrorMessage, Loading, Table, type Column } from "@/lib/components";
 import { usePaginationStore } from "@/stores/paginationStore";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
@@ -73,7 +73,7 @@ const EvolutionTriggers = () => {
 
   return (
     <>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <Loading />}
       {isError && <ErrorMessage message={(error as Error).message} />}
       {data && (
         <Table

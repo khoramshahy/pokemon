@@ -10,5 +10,6 @@ export const text = {
     height: "Height",
     weight: "Weight",
     order: "Order",
+    loading: "Loading ...",
   },
 };

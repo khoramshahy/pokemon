@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="p-8">
+    <div>
       <main>
         <a
           className="hover:underline hover:underline-offset-4"

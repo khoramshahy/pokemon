@@ -1,11 +1,10 @@
 "use client";
 
 import { be_url, staleTime } from "@/api/backend-url";
-import { ErrorMessage } from "@/lib/components";
+import { ErrorMessage, Loading } from "@/lib/components";
 import { text } from "@/lib/translator";
 import { useQuery } from "@tanstack/react-query";
 import type { PokemonModalProps } from "../pokemon-modal";
-
 interface PokemonDetails {
   name: string;
   height: number;
@@ -37,9 +36,7 @@ const PokemonDetails = ({ name }: PokemonDetailsProps) => {
 
   return (
     <>
-      {isLoading && (
-        <p className="text-center">{text.pokemon.loadingDetails}</p>
-      )}
+      {isLoading && <Loading message={text.pokemon.loadingDetails} />}
       {isError && <ErrorMessage message={error.message || "Unknown error"} />}
       {pokemon && (
         <div className="pl-4 mb-4">
