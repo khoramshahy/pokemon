@@ -50,5 +50,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Integrate CI/CD pipelines for automated builds and tests
 - Add environment variable support via .env for API URLs and other configs
 - Improve accessibility (a11y) of components (ARIA roles, keyboard navigation, etc.)
-- ...y) of components (ARIA roles, keyboard navigation, etc.)
-+  ...
+-  ...
